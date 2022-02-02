@@ -27,24 +27,29 @@ function closeQuickSearch() {
     }
 }
 
-function keyupToQuickSearch(e) {
-    // Define the second key pressed.
-    if (e.key == 'k') {
-        // Close the search panel if it is open.
-        closeQuickSearch();
-        // Open the search panel if it is closed.
-        openQuickSearch();
-    }
-}
-
-function keydownToQuickSearch(e) {
-    // Define the first key pressed.
-    if (e.ctrlKey || e.metaKey) {
-        document.addEventListener('keyup', keyupToQuickSearch, false);
-    }
-}
-
 // Add the event listener.
 (function() {
-    document.addEventListener('keydown', keydownToQuickSearch, false);
+    // Inifiatize an array to keep track of the command key pressed.
+    let keysPressed = {};
+
+    // Store the value of the first key pressed.
+    document.addEventListener('keydown', (event) => {
+        keysPressed[event.key] = true;
+
+        // Run the action if the first key is command, and the second key is k.
+        if (keysPressed['Meta'] && event.key == 'k') {
+            // Close the search panel if it is open.
+            closeQuickSearch();
+            // Open the search panel if it is closed.
+            openQuickSearch();
+        }
+    });
+
+    // Initialize back the array to nothing.
+    document.addEventListener('keyup', (event) => {
+        keysPressed[event.key] = false;
+    });
+
+
+    //document.addEventListener('keydown', keydownToQuickSearch, false);
 })();
