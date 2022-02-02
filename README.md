@@ -1,5 +1,5 @@
 # 360-search-shortcut
-[Tampermonkey](https://www.tampermonkey.net/) script to open and close the quick search in 360Learning with a keyboard shortcut.
+[Tampermonkey](https://www.tampermonkey.net/) script to open and close the quick search in 360Learning with ⌘+K.
 
 ![CleanShot 2022-02-02 at 19 30 03](https://user-images.githubusercontent.com/7119880/152215694-3654807a-b38e-4b14-876e-82d39444191c.gif)
 
