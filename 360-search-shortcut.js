@@ -5,6 +5,7 @@
 // @description  Use the ⌘K shortcut to open the quick search.
 // @author       Flavien
 // @match        https://*.360learning.com/home*
+// @match        https://*.360learning-dev.com/home*
 // @grant        none
 // ==/UserScript==
 
