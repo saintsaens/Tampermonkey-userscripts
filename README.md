@@ -10,7 +10,7 @@ In any 360Learning platform, hit `⌘K` (or `CTRL-K`) to open or close the quick
 
 ![CleanShot 2022-02-02 at 19 30 03](https://user-images.githubusercontent.com/7119880/152215694-3654807a-b38e-4b14-876e-82d39444191c.gif)
 
-### `Trello notification crusher
+### `Trello notification crusher`
 
 In any Trello board, hit `u` to open the notification panel, then `e` to mark all as read and close the panel.
 
