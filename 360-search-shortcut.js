@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         360 quick search
-// @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Use the ⌘K shortcut to open the quick search.
+// @namespace    http://360learning.com/
+// @version      1.1
+// @description  Use ⌘K (or CTRL-K) to open the quick search.
 // @author       Flavien
 // @match        https://*.360learning.com/home*
 // @match        https://*.360learning-dev.com/home*
@@ -10,47 +10,36 @@
 // ==/UserScript==
 
 
-// Click the search bar at the top left.
 function openQuickSearch() {
-    // Only run if the search section is accessible.
-    var isSearchClosed = document.getElementsByClassName("search-section");
-    if (isSearchClosed.length > 0) {
-        document.getElementsByClassName("search-section")[0].click();
-    }
+    // Run .click() only if element is not undefined.
+    document.querySelector(".search-section")?.click();
 }
 
-// Close the search panel at the top right.
 function closeQuickSearch() {
-    // Only run if there is a cross at the top right.
-    var isSearchOpen = document.getElementsByClassName("cross");
-    if (isSearchOpen.length > 0) {
-        document.getElementsByClassName("cross")[0].click();
+    document.querySelector(".modal-backdrop .cross")?.click();
+}
+
+function isModalOpened() {
+    // Convert element/undefined into boolean true/false. Amazing.
+    return !!document.querySelector(".modal-backdrop");
+}
+
+function toggleQuickSearch() {
+    if (isModalOpened()) {
+        closeQuickSearch();
+    }
+    else {
+        openQuickSearch();
     }
 }
 
 // Add the event listener.
-(function() {
-    // Inifiatize an array to keep track of the command key pressed.
-    let keysPressed = {};
-
-    // Store the value of the first key pressed.
+function init() {
     document.addEventListener('keydown', (event) => {
-        keysPressed[event.key] = true;
-
-        // Run the action if the first key is command, and the second key is k.
-        if (keysPressed['Meta'] && event.key == 'k') {
-            // Close the search panel if it is open.
-            closeQuickSearch();
-            // Open the search panel if it is closed.
-            openQuickSearch();
+        if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+            toggleQuickSearch();
         }
-    });
+    })
+}
 
-    // Initialize back the array to nothing.
-    document.addEventListener('keyup', (event) => {
-        keysPressed[event.key] = false;
-    });
-
-
-    //document.addEventListener('keydown', keydownToQuickSearch, false);
-})();
+init();
