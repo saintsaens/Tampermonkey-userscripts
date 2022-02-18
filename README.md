@@ -4,6 +4,15 @@ Install [Tampermonkey](https://www.tampermonkey.net/) on your favorite browser.
 
 ---
 
+### `360Learning next activity shortcut`
+
+In any 360Learning course, hit `j` to go to the next activity (or finish the course, or submit a question).
+
+[Source](https://github.com/saintsaens/userscripts/blob/main/360-next-shortcut.user.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/360-next-shortcut.user.js)
+
+---
+
+
 ### `360Learning Quick Search shortcut`
 
 In any 360Learning platform, hit `⌘K` (or `CTRL-K`) to open or close the quick search.
