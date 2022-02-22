@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         360 quick search
-// @version      1.1
+// @version      1.2
 // @description  Use ⌘K (or CTRL-K) to open the quick search.
 // @author       Flavien
 // @include      https://*.360learning.com/home*
 // @include      https://*.360learning-dev.com/home*
+// @include      https://*.360mooc.com/home*
 // @downloadURL  https://raw.githubusercontent.com/saintsaens/360-search-shortcut/main/360-search-shortcut.js
 // @updateURL    https://raw.githubusercontent.com/saintsaens/360-search-shortcut/main/360-search-shortcut.js
 // ==/UserScript==
