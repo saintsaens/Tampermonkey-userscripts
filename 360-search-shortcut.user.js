@@ -13,7 +13,7 @@
 
 function openQuickSearch() {
     // Run .click() only if element is not undefined.
-    document.querySelector(".search-section")?.click();
+    document.querySelector(".search-button")?.click();
 }
 
 function closeQuickSearch() {
