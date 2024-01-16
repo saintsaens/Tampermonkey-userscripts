@@ -10,13 +10,13 @@
 
 
 function clickNotificationButton() {
-        document.querySelector('button[data-testid="header-notifications-button"]').click();
+        document.querySelector('button[data-testid="header-notifications-button"]')?.click();
         // Blur the button, otherwise clicking again will just focus it.
-        document.querySelector('button[data-testid="header-notifications-button"]').blur();
+        document.querySelector('button[data-testid="header-notifications-button"]')?.blur();
 }
 
 function clickMarkAllAsRead() {
-    document.querySelector('button[data-testid="mark-all-read-button"]').click();
+    document.querySelector('button[data-testid="mark-all-read-button"]')?.click();
 }
 
 // Map clicking actions to keyboard shortcuts.
