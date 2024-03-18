@@ -4,7 +4,7 @@ Install [Tampermonkey](https://www.tampermonkey.net/) on your favorite browser.
 
 ---
 
-### ![17469809071553167211-20](https://user-images.githubusercontent.com/7119880/154653763-21414ef2-07bb-4a14-99ad-5dae6fa6aa7b.png) `360Learning next activity shortcut`
+### `360Learning next activity shortcut`
 
 In any 360Learning course, hit `j` to go to the next activity (or finish the course, or submit a question).
 
@@ -13,7 +13,7 @@ In any 360Learning course, hit `j` to go to the next activity (or finish the cou
 ---
 
 
-### ![17853935111558096454-20](https://user-images.githubusercontent.com/7119880/154653927-10a1c484-efda-4a19-8b9f-3b14f6b1d47f.png) `360Learning Quick Search shortcut`
+### `360Learning Quick Search shortcut`
 
 In any 360Learning platform, hit `⌘K` (or `CTRL-K`) to open or close the quick search.
 
@@ -28,7 +28,7 @@ In any 360Learning platform, hit `⌘K` (or `CTRL-K`) to open or close the quick
 
 ---
 
-### ![20991048751555937113-20](https://user-images.githubusercontent.com/7119880/154654353-c94ec07b-f7f0-42bf-89a2-0077c76d0880.png) `Trello notification crusher`
+### `Trello notification crusher`
 
 In any Trello board, hit `u` to open the notification panel, then `e` to mark all as read and close the panel.
 
@@ -36,10 +36,8 @@ In any Trello board, hit `u` to open the notification panel, then `e` to mark al
 
 ---
 
-### ![17469809071553167211-20](https://user-images.githubusercontent.com/7119880/154653763-21414ef2-07bb-4a14-99ad-5dae6fa6aa7b.png) `Zendesk article edit mode`
+### `Zendesk article edit mode`
 
 From any Zendesk article in view mode, hit `e` to open the article in edit mode (equivalent to clicking `Edit article` at the top of the page).
 
-[Source](https://github.com/saintsaens/userscripts/blob/main/zdesk-article-edit-mode.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/zdesk-article-edit-mode.js)
-
----
+[Source](https://github.com/saintsaens/userscripts/blob/main/zdesk-article-edit-mode.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/zdesk-article-edit-mode.user.js)
