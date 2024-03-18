@@ -40,4 +40,4 @@ In any Trello board, hit `u` to open the notification panel, then `e` to mark al
 
 From any Zendesk article in view mode, hit `e` to open the article in edit mode (equivalent to clicking `Edit article` at the top of the page).
 
-[Source](https://github.com/saintsaens/userscripts/blob/main/zdesk-article-edit-mode.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/zdesk-article-edit-mode.user.js)
+[Source](https://github.com/saintsaens/userscripts/blob/main/zdesk-article-edit-mode.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/zdesk-article-edit-mode.user.js)  
