@@ -33,3 +33,13 @@ In any 360Learning platform, hit `⌘K` (or `CTRL-K`) to open or close the quick
 In any Trello board, hit `u` to open the notification panel, then `e` to mark all as read and close the panel.
 
 [Source](https://github.com/saintsaens/userscripts/blob/main/trello-notif-crusher.user.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/trello-notif-crusher.user.js)
+
+---
+
+### ![17469809071553167211-20](https://user-images.githubusercontent.com/7119880/154653763-21414ef2-07bb-4a14-99ad-5dae6fa6aa7b.png) `Zendesk article edit mode`
+
+From any Zendesk article in view mode, hit `e` to open the article in edit mode (equivalent to clicking `Edit article` at the top of the page).
+
+[Source](https://github.com/saintsaens/userscripts/blob/main/zdesk-article-edit-mode.js) | [Direct install](https://raw.githubusercontent.com/saintsaens/userscripts/main/zdesk-article-edit-mode.js)
+
+---
