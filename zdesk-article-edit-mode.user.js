@@ -15,7 +15,7 @@ function clickNext() {
 // Add the event listener.
 function init() {
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'e') {
+        if (event.metaKey || event.ctrlKey) && event.key === 'e') {
             clickNext();
         }
     })
