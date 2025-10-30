@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         360 quick search
-// @version      1.2
-// @description  Use ⌘K (or CTRL-K) to open the quick search.
+// @version      1.3
+// @description  Use ⌘K (or CTRL-K) to open the quick search and close it like Escape.
 // @author       Flavien
 // @include      https://*.360learning.com/home*
 // @include      https://*.360learning-dev.com/home*
@@ -10,37 +10,42 @@
 // @updateURL    https://raw.githubusercontent.com/saintsaens/360-search-shortcut/main/360-search-shortcut.js
 // ==/UserScript==
 
-
 function openQuickSearch() {
-    // Run .click() only if element is not undefined.
-    document.querySelector(".search-button")?.click();
+    const quickSearchHeader = document.querySelector(".quick-search-bar .header");
+    if (!quickSearchHeader) return;
+    quickSearchHeader.click();
+
+    // Wait a bit for the modal to appear and focus the input
+    setTimeout(() => {
+        const input = document.querySelector(".quick-search-bar input, .modal-backdrop input");
+        if (input) input.focus();
+    }, 100); // 100ms delay to ensure modal is rendered
 }
 
 function closeQuickSearch() {
-    document.querySelector(".modal-backdrop .cross")?.click();
+    // Mimic clicking outside the modal by clicking the backdrop
+    document.querySelector(".header-container")?.click();
 }
 
 function isModalOpened() {
-    // Convert element/undefined into boolean true/false. Amazing.
-    return !!document.querySelector(".modal-backdrop");
+    return !!document.querySelector(".quick-search-bar .opened");
 }
 
 function toggleQuickSearch() {
     if (isModalOpened()) {
         closeQuickSearch();
-    }
-    else {
+    } else {
         openQuickSearch();
     }
 }
 
-// Add the event listener.
 function init() {
     document.addEventListener('keydown', (event) => {
-        if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
             toggleQuickSearch();
         }
-    })
+    });
 }
 
 init();
